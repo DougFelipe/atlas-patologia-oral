@@ -72,7 +72,7 @@ body {
 
 .homepage-image-section img {
   max-width: 100%;
-  width: 400px; /* Ajuste para telas pequenas */
+  width: 800px; /* Ajuste para telas pequenas */
   border: none;
 }
 
