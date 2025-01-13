@@ -64,15 +64,15 @@ body {
   justify-content: center;
   text-align: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem;
   max-width: 1200px;
-  margin: 5rem auto 0;
+  margin: 2rem auto 0;
   flex-wrap: wrap;
 }
 
 .homepage-image-section img {
-  max-width: 100%;
-  width: 800px; /* Ajuste para telas pequenas */
+  max-width: 90%;
+  width: 700px; /* Ajuste para telas pequenas */
   border: none;
 }
 
