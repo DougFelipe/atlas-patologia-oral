@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const summaryGrid = document.getElementById("summary-grid");
 
-  // Lista de temas reordenada
+  // Lista de temas com nomes e arquivos
   const temas = [
     { name: "Lábio", file: "Lábio.jpg" },
     { name: "Língua", file: "Língua.jpg" },
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   // Gera cada item do sumário
-  temas.forEach(tema => {
+  temas.forEach((tema, index) => {
     const item = document.createElement("div");
     item.classList.add("summary-item");
 
@@ -30,13 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
     img.src = `assets/images/temas/${tema.file}`;
     img.alt = tema.name;
 
-    // Cria o título
-    const title = document.createElement("h3");
-    title.textContent = tema.name;
+    // Cria o link do título com o parâmetro de URL
+    const link = document.createElement("a");
+    link.href = `tema.html?tema=${encodeURIComponent(tema.name)}`; // Passa o nome do tema como parâmetro
+    link.textContent = tema.name;
 
-    // Monta o item e adiciona ao container
+    // Adiciona elementos ao item
+    const title = document.createElement("h3");
+    title.appendChild(link);
+
     item.appendChild(img);
     item.appendChild(title);
-    summaryGrid.appendChild(item); // Adiciona o item ao grid
+    summaryGrid.appendChild(item);
   });
 });

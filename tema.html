@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tema</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Cabeçalho com Menu -->
+  <header>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#">Modo de Usar</a></li>
+        <li><a href="#">Glossário</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section class="indisponivel-section">
+      <h1 id="tema-title">Tema</h1>
+      <p id="tema-message">Ainda estamos trabalhando na elaboração do conteúdo deste tema.</p>
+      <p>Por favor, volte mais tarde!</p>
+    </section>
+  </main>
+
+
+
+  <!-- Inclusão do JavaScript -->
+  <script>
+    // Obtém o parâmetro "tema" da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const temaName = urlParams.get("tema");
+
+    // Atualiza o conteúdo da página com base no tema
+    if (temaName) {
+      document.getElementById("tema-title").textContent = `Tema: ${temaName}`;
+    }
+  </script>
+</body>
+</html>
